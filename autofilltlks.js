@@ -630,5 +630,37 @@ visible[66].dispatchEvent(new Event("input",{bubbles:true}));
 
 }
 
+
+// ========================
+// PLACE REGISTERED
+// ========================
+let valueCo27 = match[27].replace(/"/g,"").replace(/\r/g,"").trim();
+let location = valueCo27;
+
+visible[92].value = location
+
+// ========================
+// COUNTRY REGISTERED
+// ========================
+await selectDropdown(93,"nhật",false);location
+    
+// ========================
+// NUMBER REGISTERED
+// ========================
+let valueCo28 = match[28].replace(/"/g,"").replace(/\r/g,"").trim();
+let number = valueCo28;
+
+visible[94].value = number
+    
+// ========================
+// DATE REGISTERED
+// ========================
+let valueCo29 = convertDateMDYtoInput(match[29]);
+
+visible[95].focus();
+visible[95].value = valueCo29;
+visible[95].dispatchEvent(new Event("input",{bubbles:true}));
+visible[95].dispatchEvent(new KeyboardEvent("keydown",{key:"Enter",bubbles:true}));
+    
 alert("Điền form thành công!!!");
 })();
